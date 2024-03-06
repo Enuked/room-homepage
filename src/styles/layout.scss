@@ -53,7 +53,7 @@
           z-index: 1;
           display: block;
           position: fixed;
-          background-color: #0000006b;
+          background-color: $Black;
           width: 100vw;
           height: 100vh;
           top: 0;
@@ -63,7 +63,7 @@
           }
         }
         nav {
-          background-color: white;
+          background-color: $White;
           z-index: 2;
           padding: 28px 20px 28px 20px;
           @media (min-width: 768px) {
