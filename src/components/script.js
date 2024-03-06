@@ -1,13 +1,15 @@
 const mobileImages = [
-  '../../public/assets/images/mobile-image-hero-1.jpg',
-  '../../public/assets/images/mobile-image-hero-2.jpg',
-  '../../public/assets/images/mobile-image-hero-3.jpg'
+  '/assets/images/mobile-image-hero-1.jpg',
+  '/assets/images/mobile-image-hero-2.jpg',
+  '/assets/images/mobile-image-hero-3.jpg'
 ];
+
 const desktopImages = [
-  '../../public/assets/images/desktop-image-hero-1.jpg',
-  '../../public/assets/images/desktop-image-hero-2.jpg',
-  '../../public/assets/images/desktop-image-hero-3.jpg'
+  '/assets/images/desktop-image-hero-1.jpg',
+  '/assets/images/desktop-image-hero-2.jpg',
+  '/assets/images/desktop-image-hero-3.jpg'
 ];
+
 
 const imgElement = document.querySelector('.library');
 const mobile = document.querySelectorAll('.mobile1, .mobile2, .mobile3');
