@@ -144,6 +144,8 @@
           display: none;
           > li {
             padding-bottom: 8px;
+            margin-top: 9px;
+              font-weight: 600;
 
             &:hover {
               cursor: pointer;
@@ -163,6 +165,7 @@
             padding-bottom: 5px;
             > li {
               padding-bottom: 8px;
+              
 
               &:hover {
                 cursor: pointer;
