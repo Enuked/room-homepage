@@ -1,0 +1,238 @@
+@import "../styles/global.scss";
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+
+  .flex-1 {
+    display: block;
+    .description {
+      padding: 62px 33px 0 33px;
+      h2 {
+        font-size: 35px;
+      }
+      button {
+        cursor: pointer;
+        font-size: 12px;
+        display: flex;
+        padding: 0;
+        font-weight: 600;
+        margin-bottom: 76px;
+        letter-spacing: 8px;
+        align-items: center;
+        gap: 20px;
+        color: $Very-Dark-Gray;
+        img {
+          width: 41px;
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      display: flex;
+      height: 540px;
+      .description {
+        width: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+      }
+      .container {
+        flex-grow: 1;
+      }
+    }
+    .container {
+      max-width: 375px;
+      position: relative;
+      @media (min-width: 786px) {
+        display: flex;
+        max-width: 100%;
+      }
+      &.active {
+        .blur-effect {
+          z-index: 1;
+          display: block;
+          position: fixed;
+          background-color: #0000006b;
+          width: 100vw;
+          height: 100vh;
+          top: 0;
+          left: 0;
+          @media (min-width: 768px) {
+            display: none;
+          }
+        }
+        nav {
+          background-color: white;
+          z-index: 2;
+          padding: 28px 20px 28px 20px;
+          @media (min-width: 768px) {
+            background-color: transparent;
+          }
+          h1 {
+            display: none;
+          }
+          ul {
+            display: flex;
+            list-style: none;
+            z-index: 2;
+            gap: 30px;
+            padding-left: 50px;
+            flex-grow: 2;
+          }
+          .hamburg {
+            z-index: 3;
+            background-image: url("../../public/assets/images/icon-close.svg");
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      nav {
+        position: absolute;
+        display: flex;
+        max-width: 375px;
+        padding: 48px 24px 0px 24px;
+        width: 100%;
+        align-items: center;
+        @media (min-width: 768px) {
+          padding: 48px 24px 0px 56px;
+        }
+        > h1 {
+          display: block;
+          @media (min-width: 768px) {
+            padding: 0 0 13px 0;
+            
+          }
+        }
+        .blur-effect {
+          display: none;
+        }
+
+        .hamburg {
+          background-image: url("../../public/assets/images/icon-hamburger.svg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 20px;
+          height: 14px;
+          cursor: pointer;
+          @media (min-width: 768px) {
+            display: none;
+          }
+        }
+        > img {
+          height: 14px;
+          width: 19px;
+        }
+        h1 {
+          flex-grow: 2;
+          display: flex;
+          justify-content: center;
+          padding-right: 78px;
+          font-family: $font-family;
+          color: $White;
+          font-style: $font-style;
+          font-weight: 400;
+          @media (min-width: 768px) {
+            padding-right: 0px;
+          }
+        }
+        ul {
+          display: none;
+          > li {
+            padding-bottom: 8px;
+
+            &:hover {
+              cursor: pointer;
+              outline: none;
+              box-shadow: inset 0 -1.5px 0 $Black;
+              transition: box-shadow 0.3s ease;
+            }
+          }
+          @media (min-width: 768px) {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            gap: 31px;
+            flex-grow: 2;
+            font-size: 20px;
+            color: $White;
+            padding-bottom: 5px;
+            > li {
+              padding-bottom: 8px;
+
+              &:hover {
+                cursor: pointer;
+                outline: none;
+                box-shadow: inset 0 -1.5px 0 $White;
+                transition: box-shadow 0.3s ease;
+              }
+            }
+          }
+        }
+      }
+      .img-container {
+        .prev-next {
+          position: relative;
+          margin-top: -60px;
+          display: flex;
+          flex-direction: row-reverse;
+          @media (min-width: 768px) {
+            margin-top: -84px;
+            margin-right: -159px;
+          }
+          button {
+            cursor: pointer;
+            background-color: $Black;
+            width: 56px;
+            height: 56px;
+            &:hover {
+              background-color: $Very-Dark-Gray;
+            }
+            @media (min-width: 768px) {
+              width: 80px;
+              height: 80px;
+            }
+          }
+        }
+        .library {
+          object-fit: cover;
+          @media (min-width: 758px) {
+          }
+        }
+      }
+    }
+  }
+  .flex-2 {
+    display: block;
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: -7px;
+      .description-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 67px 48px 67px 48px;
+        > h2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .description-2 {
+    padding: 54px 31px 44px 31px;
+
+    > h2 {
+      font-size: 15px;
+      letter-spacing: 3px;
+    }
+  }
+}
+.library2,
+.library3 {
+  display: none;
+}

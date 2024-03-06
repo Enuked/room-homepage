@@ -1,0 +1,42 @@
+$font-family: "League Spartan", sans-serif;
+$font-optical-sizing: auto;
+$font-style: normal;
+
+$Dark-Gray: hsl(0, 0%, 63%);
+$Black: hsl(0, 0%, 0%);
+$White: hsl(0, 0%, 100%);
+$Very-Dark-Gray: hsl(0, 0%, 27%);
+
+p,
+h1,
+img,
+body {
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+li {
+  font-family: $font-family;
+  margin: 0px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  color: $Dark-Gray;
+  line-height: 1.2;
+  margin: 19px 0 33px 0;
+}
