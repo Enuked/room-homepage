@@ -3,10 +3,9 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  max-width: 375px;
-   @media (min-width: 768px) {
-    max-width: 100%;
-   }
+  @media (min-width: 768px) {
+    max-width: 1440px;
+  }
 
   .flex-1 {
     display: block;
@@ -46,7 +45,6 @@
       }
     }
     .container {
-      max-width: 375px;
       position: relative;
       @media (min-width: 786px) {
         display: flex;
@@ -57,7 +55,7 @@
           z-index: 1;
           display: block;
           position: fixed;
-          background-color: $Black;
+          background-color: hsl(0deg 0% 0% / 45%);
           width: 100vw;
           height: 100vh;
           top: 0;
@@ -69,7 +67,7 @@
         nav {
           background-color: $White;
           z-index: 2;
-          padding: 28px 20px 28px 20px;
+          padding: 28px 37px 28px 22px;
           @media (min-width: 768px) {
             background-color: transparent;
           }
@@ -98,9 +96,7 @@
       nav {
         position: absolute;
         display: flex;
-        max-width: 375px;
         padding: 48px 24px 0px 24px;
-        width: 100%;
         align-items: center;
         @media (min-width: 768px) {
           padding: 48px 24px 0px 56px;
@@ -134,13 +130,14 @@
           flex-grow: 2;
           display: flex;
           justify-content: center;
-          padding-right: 78px;
+          padding: 0 78px 0 20px;
           font-family: $font-family;
           color: $White;
           font-style: $font-style;
           font-weight: 400;
           @media (min-width: 768px) {
             padding-right: 0px;
+            padding-bottom: 7px;
           }
         }
         ul {
@@ -204,7 +201,9 @@
         }
         .library {
           object-fit: cover;
+          width: 100%;
           @media (min-width: 758px) {
+            width: 840px;
           }
         }
       }

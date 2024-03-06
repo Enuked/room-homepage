@@ -1,3 +1,299 @@
-nav {
+p,
+h1,
+img,
+body {
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+li {
+  font-family: "League Spartan", sans-serif;
+  margin: 0px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  color: hsl(0, 0%, 63%);
+  line-height: 1.2;
+  margin: 19px 0 33px 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .main-container {
+    max-width: 1440px;
+  }
+}
+.main-container .flex-1 {
+  display: block;
+}
+.main-container .flex-1 .description {
+  padding: 62px 33px 0 33px;
+}
+.main-container .flex-1 .description h2 {
+  font-size: 35px;
+}
+.main-container .flex-1 .description button {
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  padding: 0;
+  font-weight: 600;
+  margin-bottom: 76px;
+  letter-spacing: 8px;
+  align-items: center;
+  gap: 20px;
+  color: hsl(0, 0%, 27%);
+}
+.main-container .flex-1 .description button img {
+  width: 41px;
+}
+@media (min-width: 768px) {
+  .main-container .flex-1 {
+    display: flex;
+    height: 540px;
+  }
+  .main-container .flex-1 .description {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+  }
+  .main-container .flex-1 .container {
+    flex-grow: 1;
+  }
+}
+.main-container .flex-1 .container {
+  position: relative;
+}
+@media (min-width: 786px) {
+  .main-container .flex-1 .container {
+    display: flex;
+    max-width: 100%;
+  }
+}
+.main-container .flex-1 .container.active .blur-effect {
+  z-index: 1;
+  display: block;
+  position: fixed;
+  background-color: hsla(0, 0%, 0%, 0.45);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+@media (min-width: 768px) {
+  .main-container .flex-1 .container.active .blur-effect {
+    display: none;
+  }
+}
+.main-container .flex-1 .container.active nav {
+  background-color: hsl(0, 0%, 100%);
+  z-index: 2;
+  padding: 28px 37px 28px 22px;
+}
+@media (min-width: 768px) {
+  .main-container .flex-1 .container.active nav {
+    background-color: transparent;
+  }
+}
+.main-container .flex-1 .container.active nav h1 {
+  display: none;
+}
+.main-container .flex-1 .container.active nav ul {
+  display: flex;
+  list-style: none;
+  z-index: 2;
+  gap: 30px;
+  padding-left: 50px;
+  flex-grow: 2;
+}
+.main-container .flex-1 .container.active nav .hamburg {
+  z-index: 3;
+  background-image: url("../../public/assets/images/icon-close.svg");
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-container .flex-1 .container nav {
   position: absolute;
+  display: flex;
+  padding: 48px 24px 0px 24px;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .main-container .flex-1 .container nav {
+    padding: 48px 24px 0px 56px;
+  }
+}
+.main-container .flex-1 .container nav > h1 {
+  display: block;
+}
+@media (min-width: 768px) {
+  .main-container .flex-1 .container nav > h1 {
+    padding: 0 0 13px 0;
+  }
+}
+.main-container .flex-1 .container nav .blur-effect {
+  display: none;
+}
+.main-container .flex-1 .container nav .hamburg {
+  background-image: url("../../public/assets/images/icon-hamburger.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .main-container .flex-1 .container nav .hamburg {
+    display: none;
+  }
+}
+.main-container .flex-1 .container nav > img {
+  height: 14px;
+  width: 19px;
+}
+.main-container .flex-1 .container nav h1 {
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  padding: 0 78px 0 20px;
+  font-family: "League Spartan", sans-serif;
+  color: hsl(0, 0%, 100%);
+  font-style: normal;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .main-container .flex-1 .container nav h1 {
+    padding-right: 0px;
+    padding-bottom: 7px;
+  }
+}
+.main-container .flex-1 .container nav ul {
+  display: none;
+}
+.main-container .flex-1 .container nav ul > li {
+  padding-bottom: 8px;
+  margin-top: 9px;
+  font-weight: 600;
+}
+.main-container .flex-1 .container nav ul > li:hover {
+  cursor: pointer;
+  outline: none;
+  box-shadow: inset 0 -1.5px 0 hsl(0, 0%, 0%);
+  transition: box-shadow 0.3s ease;
+}
+@media (min-width: 768px) {
+  .main-container .flex-1 .container nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    gap: 31px;
+    flex-grow: 2;
+    font-size: 20px;
+    color: hsl(0, 0%, 100%);
+    padding-bottom: 5px;
+  }
+  .main-container .flex-1 .container nav ul > li {
+    padding-bottom: 8px;
+  }
+  .main-container .flex-1 .container nav ul > li:hover {
+    cursor: pointer;
+    outline: none;
+    box-shadow: inset 0 -1.5px 0 hsl(0, 0%, 100%);
+    transition: box-shadow 0.3s ease;
+  }
+}
+.main-container .flex-1 .container .img-container .prev-next {
+  position: relative;
+  margin-top: -60px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+@media (min-width: 768px) {
+  .main-container .flex-1 .container .img-container .prev-next {
+    margin-top: -84px;
+    margin-right: -159px;
+  }
+}
+.main-container .flex-1 .container .img-container .prev-next button {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 0%);
+  width: 56px;
+  height: 56px;
+}
+.main-container .flex-1 .container .img-container .prev-next button:hover {
+  background-color: hsl(0, 0%, 27%);
+}
+@media (min-width: 768px) {
+  .main-container .flex-1 .container .img-container .prev-next button {
+    width: 80px;
+    height: 80px;
+  }
+}
+.main-container .flex-1 .container .img-container .library {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+@media (min-width: 758px) {
+  .main-container .flex-1 .container .img-container .library {
+    width: 840px;
+  }
+}
+.main-container .flex-2 {
+  display: block;
+}
+.main-container .flex-2 img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .main-container .flex-2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -7px;
+  }
+  .main-container .flex-2 .description-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 67px 48px 67px 48px;
+  }
+  .main-container .flex-2 .description-2 > h2 {
+    font-size: 20px;
+  }
+}
+.main-container .description-2 {
+  padding: 54px 31px 44px 31px;
+}
+.main-container .description-2 > h2 {
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.library2,
+.library3 {
+  display: none;
 }

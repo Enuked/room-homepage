@@ -4,3 +4,31 @@ img,
 body {
   margin: 0;
 }
+
+p,
+h1,
+h2,
+li {
+  font-family: "League Spartan", sans-serif;
+  margin: 0px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  color: hsl(0, 0%, 63%);
+  line-height: 1.2;
+  margin: 19px 0 33px 0;
+}
